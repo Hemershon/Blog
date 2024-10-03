@@ -1,15 +1,20 @@
 # Build settings
 permalink: /blog/:year/:title/
+permalink: /projects/:year/:title/
 markdown: kramdown
 highlighter: pygments
 plugins: [jekyll-paginate-v2]
 
 pagination:
   enabled: true
-  per_page: 3
+  per_page: 10
   permalink: "/page/:num/"
 
 comments: true
+
+collections:
+  projects:
+    output: true
 
 source: source
 destination: _site
@@ -19,13 +24,12 @@ sass:
 
 # SEO settings
 title: Hemershon
-description: "Blog do Hemershon Silva, engenheiro de software Sênior a 7 anos desenvolvendo soluções web."
-keywords: "ruby on rails, Postgresql, blog, web"
-url: ""
+description: "Blog do Hemershon Silva, engenheiro de software Sênior a 12 anos desenvolvendo soluções web."
+keywords: "ruby on rails, Postgresql, blog, web, Go, Kotlin"
 baseurl: ""
 
 google_analytics: UA-111493883-1
-repo: https://github.com/hemershon/hemershon.github.io
+repo: https://github.com/hemershon
 disqus_shortname: "Hemershon"
 disqus_site_shortname: "Hemershon"
 
@@ -33,7 +37,7 @@ disqus_site_shortname: "Hemershon"
 author:
   name: Hemershon Silva
   job: Software Engineer
-  bio: "Sou engenheiro de software que a 7 anos desenvolvo sistema para web"
+  bio: "Sou engenheiro de software que atua a 12 anos no desenvolvimento de sistema para web"
   thumb: /images/author.png
   email: hemershon@gmail.com
   url: ""
@@ -46,8 +50,8 @@ author:
 navbar:
   - slug: about
     title: Sobre
-  # - slug: icons
-  #   title: Icons
+  - slug: projects
+    title: Projeto
   - slug: blog
     title: Blog
 
